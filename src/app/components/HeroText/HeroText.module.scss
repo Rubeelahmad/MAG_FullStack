@@ -1,0 +1,15 @@
+.wrapBox {
+  @apply relative flex flex-col gap-4 justify-center items-center mb-[100px];
+  .bgimg5 {
+    @apply absolute bottom-[-30px] left-[65%];
+  }
+  p {
+    @apply max-w-[400px];
+  }
+  .buttonGrop {
+    @apply flex gap-4;
+  }
+  .formNote {
+    @apply text-gray-400;
+  }
+}

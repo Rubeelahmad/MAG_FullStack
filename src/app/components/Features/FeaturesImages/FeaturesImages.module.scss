@@ -1,0 +1,21 @@
+.sliders {
+  @apply flex flex-col gap-4;
+  .slideItem {
+  }
+  .slideNav {
+    @apply flex flex-col gap-2 items-center justify-center;
+    .slidebtn {
+      @apply flex justify-center gap-4 items-center font-semibold;
+      button {
+        @apply flex justify-center items-center w-[32px] h-[32px] border-2 border-[#32baae] rounded-xl;
+      }
+    }
+    .slidestatus {
+      @apply bg-[#cbefed] w-[120px] h-2 rounded-full;
+      .progressbar {
+        @apply block bg-[#32baae] h-2 rounded-full;
+      }
+    }
+  }
+}
+

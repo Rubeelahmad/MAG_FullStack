@@ -1,0 +1,30 @@
+.wrapBox {
+  @apply relative bg-[#f2fcfb] px-4 sm:px-[60px] py-[60px] rounded-3xl;
+  .bgimg3 {
+    @apply absolute right-[120px] top-[-20px];
+  }
+  .bgimg4 {
+    @apply absolute left-[100px] bottom-[-40px];
+  }
+  .gridbox {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 items-start;
+    .featureText {
+      @apply flex flex-col gap-4;
+      ul {
+        @apply flex flex-col gap-4;
+        li {
+          @apply border-l-4 border-[#cfeae7] pl-4 cursor-pointer;
+          h3 {
+            @apply font-semibold leading-none;
+          }
+          p {
+            @apply leading-none;
+          }
+        }
+        li.active {
+          @apply border-l-4 border-[#32baae];
+        }
+      }
+    }
+  }
+}
