@@ -1,0 +1,6 @@
+.themeOptions {
+  @apply flex gap-2;
+  li.active {
+    @apply border-b-[2px] border-[#92d7d2];
+  }
+}

@@ -1,0 +1,44 @@
+.wrapBox {
+  @apply bg-[#4d5973] py-[60px] rounded-[60px];
+  .footer {
+    @apply flex gap-4 flex-col; // max-w-[1040px] m-auto;
+    .gridbox {
+      @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-between;
+      .col {
+        h4 {
+          @apply mb-1 text-[#cbced6];
+        }
+        ul {
+          @apply mb-4;
+          li {
+            a {
+              @apply text-sm text-[#cbced6];
+            }
+          }
+        }
+      }
+    }
+
+    .socialLinks {
+      @apply flex flex-col gap-4 justify-center items-center;
+      ul {
+        @apply flex gap-2;
+      }
+    }
+    .termsLink {
+      ul {
+        @apply flex justify-center gap-4;
+        li {
+          a {
+            @apply text-[#cbced6];
+          }
+        }
+      }
+    }
+    .copyright {
+      p {
+        @apply text-center text-[#cbced6];
+      }
+    }
+  }
+}

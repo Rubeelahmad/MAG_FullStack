@@ -1,0 +1,36 @@
+.wrapBox {
+  .topNav {
+    @apply flex justify-between gap-4 px-4 py-4; //  max-w-[1216px] m-auto;
+    .left {
+      ul {
+        @apply flex gap-2;
+        li {
+          @apply flex gap-2 items-center text-xs rounded-full px-2 py-1 uppercase;
+          span {
+            @apply hidden sm:block;
+          }
+        }
+      }
+    }
+    .right {
+      @apply flex gap-2;
+      button {
+        @apply flex gap-2 items-center text-xs uppercase;
+      }
+    }
+  }
+  .bottomNav {
+    .navbar {
+      @apply flex justify-center sm:justify-between items-center gap-4  px-4 py-8 rounded-full;
+      .navLeft {
+        @apply flex flex-col sm:flex-row gap-2 sm:gap-8 items-center;
+        ul.navs {
+          @apply flex gap-2 sm:gap-8;
+        }
+      }
+      .navRight {
+        @apply hidden lg:flex gap-4;
+      }
+    }
+  }
+}
