@@ -1,5 +1,6 @@
-import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { NextResponse } from "next/server";
+import { PrismaClient } from "@prisma/client";
+import { VALID_EMAIL } from "@/utils/constants";
 
 const prisma = new PrismaClient();
 
@@ -8,17 +9,47 @@ export async function POST(req: Request) {
   try {
     const { fullName, email, checkbox } = await req.json();
 
-    //Email validation from server-side
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
+    // Check for missing full name field
+    if (!fullName) {
+      return NextResponse.json(
+        { error: "Full Name required" },
+        { status: 400 }
+      );
+    }
+    // Check for missing email field
+    if (!email) {
+      return NextResponse.json({ error: "Email  required" }, { status: 400 });
+    }
+    // Email validation from server-side
+    if (!VALID_EMAIL.test(email)) {
+      return NextResponse.json(
+        { error: "Invalid email format" },
+        { status: 400 }
+      );
+    }
+    // Checkbox validation
+    if (!checkbox || checkbox === undefined) {
+      return NextResponse.json(
+        { error: "Consent is required" },
+        { status: 400 }
+      );
     }
 
+    // Create a new lead
     const newLead = await prisma.lead.create({
       data: { fullName, email, checkbox },
     });
 
-    return NextResponse.json(newLead, { status: 201 });
+    // Respond with a success message and the lead data
+    return NextResponse.json(
+      {
+        message: "Lead created successfully!",
+        lead: newLead,
+      },
+      { status: 201 }
+    );
   } catch (error) {
-    return NextResponse.json({ error: 'Error creating lead' }, { status: 500 });
+    console.error("Error creating lead:", error);
+    return NextResponse.json({ error: "Email already exists" }, { status: 500 });
   }
 }

@@ -4,7 +4,7 @@ import heroImg from "./images/heroImg.png";
 import Bgimg1 from "../images/bgimg1.png";
 import Bgimg2 from "../images/bgimg2.png";
 import Image from "next/image";
-import BookSchedule from "./BookSchedule";
+import BookLeadDemo from "./BookLeadDemo";
 
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
           <Image src={heroImg} alt="" />
         </div>
         <div className={styles.heroForm}>
-          <BookSchedule />
+          <BookLeadDemo />
         </div>
       </div>
     </div>
