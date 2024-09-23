@@ -1,0 +1,17 @@
+.wrapBox {
+  @apply relative mt-[100px];
+  .bgimg1 {
+    @apply absolute top-[-80px] left-0;
+  }
+  .bgimg2 {
+    @apply absolute top-[-60px] right-0;
+  }
+  .gridbox {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+    .heroText {
+      img {
+        @apply m-auto;
+      }
+    }
+  }
+}

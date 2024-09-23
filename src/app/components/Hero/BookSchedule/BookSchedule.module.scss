@@ -1,0 +1,24 @@
+.formproup {
+  @apply flex flex-col gap-6;
+  .formItem {
+    label {
+      @apply block text-gray-700 text-sm font-semibold;
+    }
+    .inputBox {
+      @apply w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
+  }
+  .formItem.policy {
+    @apply flex gap-2 items-center  leading-[18px];
+    input {
+      @apply h-6 w-6 text-[#32baae] focus:ring-[#32baae] border-2 border-[#32baae] rounded;
+      border: #32baae solid 2px !important;
+    }
+  }
+  .formButton {
+    @apply flex gap-4;
+  }
+  .formNote {
+    @apply text-gray-400;
+  }
+}
