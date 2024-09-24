@@ -69,7 +69,7 @@ const BookCallModal: FC<ModalProps> = ({ isModalOpen, onClose }) => {
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | any>) => {
     const { name, value, type, checked } = e.target;
 
     setFormData((prevData) => ({
@@ -94,7 +94,15 @@ const BookCallModal: FC<ModalProps> = ({ isModalOpen, onClose }) => {
     setError("");
     setSuccess("");
 
-    const { selectedDate, selectedTime, fullName, email, phone, notes, consent } = formData;
+    const {
+      selectedDate,
+      selectedTime,
+      fullName,
+      email,
+      phone,
+      notes,
+      consent,
+    } = formData;
 
     const submissionData = {
       date: selectedDate,
@@ -130,6 +138,7 @@ const BookCallModal: FC<ModalProps> = ({ isModalOpen, onClose }) => {
           consent: false,
         });
 
+        fetchBookedTimes();
         // Clear success message after 5 seconds
         setTimeout(() => {
           setSuccess("");
@@ -190,7 +199,9 @@ const BookCallModal: FC<ModalProps> = ({ isModalOpen, onClose }) => {
                   key={time}
                   onClick={() => handleTimeSelect(time)}
                   className={`${styles.timeButton} ${
-                    formData.selectedTime === time ? styles.activeTimeButton : ""
+                    formData.selectedTime === time
+                      ? styles.activeTimeButton
+                      : ""
                   } ${
                     bookedTimes.includes(time) ? styles.disabledTimeButton : ""
                   }`}

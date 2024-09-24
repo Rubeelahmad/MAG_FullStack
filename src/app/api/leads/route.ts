@@ -50,6 +50,6 @@ export async function POST(req: Request) {
     );
   } catch (error) {
     console.error("Error creating lead:", error);
-    return NextResponse.json({ error: "Email already exists" }, { status: 500 });
+    return NextResponse.json({ error: "Lead email already exist." }, { status: 500 });
   }
 }
