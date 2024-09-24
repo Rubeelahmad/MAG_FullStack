@@ -79,7 +79,14 @@ npm run dev
 
 The project will be available at `http://localhost:3000`.
 
+## Api Collection
+
+```bash
+API Collection Link: https://elements.getpostman.com/redirect?entityId=16508755-0fc4b42a-39bc-4f58-b687-d9b4e478c4d5&entityType=collection
+```
+
 ## API Endpoints
+
 
 ### Bookings
 
@@ -108,8 +115,8 @@ The project will be available at `http://localhost:3000`.
     {
       "date": "2024-09-25",
       "time": "10:00 AM",
-      "fullName": "John Doe",
-      "email": "johndoe@example.com",
+      "fullName": "Rubeel Ahmed",
+      "email": "rubeel@example.com",
       "phone": "1234567890",
       "callNotes": "Looking forward to discussing the project",
       "checkbox": true
@@ -122,8 +129,8 @@ The project will be available at `http://localhost:3000`.
         "id": 1,
         "date": "2024-09-25",
         "time": "10:00 AM",
-        "fullName": "John Doe",
-        "email": "johndoe@example.com",
+        "fullName": "Rubeel Ahmed",
+        "email": "rubeel@example.com",
         "phone": "1234567890",
         "callNotes": "Looking forward to discussing the project"
       }
@@ -198,8 +205,8 @@ The project will be available at `http://localhost:3000`.
 {
   "date": "2024-09-25",
   "time": "10:00 AM",
-  "fullName": "John Doe",
-  "email": "johndoe@example.com",
+  "fullName": "Rubeel Ahmed",
+  "email": "rubeel@example.com",
   "phone": "1234567890",
   "callNotes": "Looking forward to discussing the project",
   "checkbox": true

@@ -1,117 +1,16 @@
-
-// .modalWrapBox {
-//   @apply fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50;
-
-//   .modalContent {
-//     @apply bg-white rounded-2xl shadow-lg p-8 w-[90%]  max-w-3xl relative;
-//   }
-
-//   .closeButton {
-//     @apply absolute top-4 right-4 bg-orange-300 p-2 items-center justify-center rounded-md text-white text-sm cursor-pointer hover:bg-orange-700;
-//   }
-
-//   .modalTitle {
-//     @apply text-2xl font-semibold text-start mb-8;
-//   }
-
-//   .dateAndTimePicker {
-//     @apply flex flex-col md:flex-row gap-6 mb-8;
-//   }
-
-//   .timeButton {
-//     @apply py-2 px-4 rounded-full border text-gray-500 border-gray-300 bg-white cursor-pointer hover:bg-gray-500 hover:text-white focus:outline-none transition-colors;
-//   }
-
-//   .activeTimeButton {
-//     @apply bg-teal-500 text-white;
-//   }
-
-
-//   .formContainer {
-//     @apply grid grid-cols-1 md:grid-cols-2 gap-6 bg-teal-100/35 p-6 rounded-2xl;
-//   }
-
-//   .label {
-//     @apply flex text-sm text-gray-700 p-1;
-//   }
-
-//   .formInput,
-//   .formTextarea {
-//     @apply w-full px-3 py-2  border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400;
-//   }
-
-//   .formTextarea {
-//     @apply resize-none;
-//   }
-
-//   .datePicker {
-//     @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400;
-//   }
-
-//   .consentCheckbox {
-//     @apply flex items-start mb-6;
-
-//     input {
-//       @apply mr-2 mt-1;
-//     }
-
-//     label {
-//       @apply text-sm text-gray-700;
-
-//       a {
-//         @apply text-teal-500 underline;
-//       }
-//     }
-//   }
-
-//   .submitButton {
-//     @apply bg-teal-500 text-white py-2 px-6 rounded-full font-semibold cursor-pointer hover:bg-teal-600 transition-colors;
-//   }
-
-//   .buttonContainer {
-//     @apply flex justify-end mt-4;
-//   }
-
-//   .firstColumn {
-//     @apply col-span-1 flex flex-col gap-1;
-//   }
-
-//   .secondColumn {
-//     @apply col-span-1 flex flex-col gap-2 justify-between;
-//   }
-//   .errorMessage {
-//     @apply bg-[#ffe6e6] text-center text-[14px] text-red-500 p-1 m-2 rounded-3xl;
-//   }
-
-//   .successMessage {
-//     @apply bg-[#e6ffe6] text-center text-[14px] text-green-500 p-1 m-2 rounded-3xl;
-//   }
-
-//   .disabledTimeButton {
-//     background-color: #f0f0f0;
-//     cursor: not-allowed;
-//     color: #999;
-//     border-color: #ddd;
-//   }
-  
-// }
-
-
-
 .modalWrapBox {
   @apply fixed inset-0 flex pt-4 justify-center items-center bg-black bg-opacity-50 z-50;
   
-  /* Modal Content */
   .modalContent {
     @apply bg-white rounded-2xl shadow-lg p-8 w-full max-w-3xl relative;
-    max-height: 100vh;  /* Ensures the modal doesn't exceed the screen height */
-    overflow-y: auto;   /* Adds scrolling if content overflows vertically */
-    border-radius: 20px; /* Make modal edges more circular */
+    max-height: 100vh;  
+    overflow-y: auto;   
+    border-radius: 20px;
 
-    /* Custom Scrollbar */
+
     &::-webkit-scrollbar {
-      width: 6px;  /* Thin scrollbar */
-      border-radius: 12px; /* Rounded scrollbar edges */
+      width: 6px;  
+      border-radius: 12px;
     }
 
     &::-webkit-scrollbar-thumb {
@@ -120,27 +19,23 @@
     }
 
     &::-webkit-scrollbar-track {
-      background-color: #f0f0f0; /* Slightly lighter gray background */
-      border-radius: 12px; /* Make scrollbar track circular */
+      background-color: #f0f0f0; 
+      border-radius: 12px; 
     }
 
-    /* Firefox scrollbar */
     scrollbar-width: thin;
     scroll-padding: 20px;
     scrollbar-color: rgb(204 251 241 / 0.35);
   }
 
-  /* Close Button */
   .closeButton {
     @apply absolute top-4 right-4 bg-orange-300 p-2 items-center justify-center rounded-md text-white text-sm cursor-pointer hover:bg-orange-700;
   }
 
-  /* Modal Title */
   .modalTitle {
     @apply text-2xl font-semibold text-start mb-8;
   }
 
-  /* Date and Time Picker */
   .dateAndTimePicker {
     @apply flex flex-col md:flex-row gap-6 mb-8;
   }
@@ -153,7 +48,6 @@
     @apply bg-teal-500 text-white;
   }
 
-  /* Form Layout */
   .formContainer {
     @apply grid grid-cols-1 md:grid-cols-2 gap-6 bg-teal-100/35 p-6 rounded-2xl;
   }
@@ -175,7 +69,6 @@
     @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400;
   }
 
-  /* Consent Checkbox */
   .consentCheckbox {
     @apply flex items-start mb-6;
 
@@ -192,7 +85,6 @@
     }
   }
 
-  /* Submit Button */
   .submitButton {
     @apply bg-teal-500 text-white py-2 px-6 rounded-full font-semibold cursor-pointer hover:bg-teal-600 transition-colors;
   }
@@ -209,7 +101,6 @@
     @apply col-span-1 flex flex-col gap-2 justify-between;
   }
 
-  /* Error and Success Messages */
   .errorMessage {
     @apply bg-[#ffe6e6] text-center text-[14px] text-red-500 p-1 m-2 rounded-3xl;
   }
