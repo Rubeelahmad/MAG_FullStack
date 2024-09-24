@@ -163,8 +163,8 @@ const BookCallModal: FC<ModalProps> = ({ isModalOpen, onClose }) => {
   if (!isModalOpen) return null;
 
   return (
-    <div className={styles.modalWrapBox} onClick={handleBackgroundClick}>
-      <div className={styles.modalContent}>
+    <div className={`mainModalWrap ${styles.modalWrapBox }`} onClick={handleBackgroundClick}>
+      <div className={`mainModalContentWrap ${styles.modalContent}`}>
         {/* Close Button */}
         <button className={styles.closeButton} onClick={onClose}>
           X
@@ -176,7 +176,7 @@ const BookCallModal: FC<ModalProps> = ({ isModalOpen, onClose }) => {
 
         {/* Date and Time Picker */}
         <div className={styles.dateAndTimePicker}>
-          <div className="w-full">
+          <div className="w-full ">
             <label className="block mb-2 text-sm font-medium text-gray-700">
               Select a date
             </label>
@@ -263,7 +263,7 @@ const BookCallModal: FC<ModalProps> = ({ isModalOpen, onClose }) => {
             />
 
             {/* Consent Checkbox */}
-            <div className={styles.consentCheckbox}>
+            <div className={`${styles.consentCheckbox}`}>
               <input
                 type="checkbox"
                 name="consent"

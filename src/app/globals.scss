@@ -34,6 +34,19 @@ body {
   .featureTextWrap {
     @apply bg-[#f2fcfb] dark:bg-[#4d5973];
   }
+
+  input{
+    @apply bg-white dark:bg-[#4d5973];
+  }
+  .mainModalContentWrap{
+    @apply bg-[#f2fcfb] dark:bg-[#4d5973];
+    input,textarea{
+      @apply bg-white dark:bg-white;
+    }
+    
+  }
+
+
   .container {
     @apply flex flex-col gap-[80px] max-w-[1066px] m-auto px-4;
   }

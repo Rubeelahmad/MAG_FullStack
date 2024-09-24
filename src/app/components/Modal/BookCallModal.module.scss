@@ -2,7 +2,7 @@
   @apply fixed inset-0 flex pt-4 justify-center items-center bg-black bg-opacity-50 z-50;
   
   .modalContent {
-    @apply bg-white rounded-2xl shadow-lg p-8 w-full max-w-3xl relative;
+    @apply rounded-2xl shadow-lg p-8 w-full max-w-3xl relative;
     max-height: 100vh;  
     overflow-y: auto;   
     border-radius: 20px;
@@ -67,17 +67,21 @@
 
   .datePicker {
     @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400;
+    background-color: transparent !important;
   }
 
   .consentCheckbox {
-    @apply flex items-start mb-6;
+    @apply flex items-start mb-6 ;
+    
 
     input {
-      @apply mr-2 mt-1;
+      @apply mr-2 mt-1 dark:bg-transparent bg-transparent bg-white dark:bg-white;
+      background-color: transparent !important;
+      
     }
 
     label {
-      @apply text-sm text-gray-700;
+      @apply text-sm text-gray-700 ;
 
       a {
         @apply text-teal-500 underline;
@@ -110,7 +114,7 @@
   }
 
   .disabledTimeButton {
-    background-color: #f0f0f0;
+    background-color: #d2c7c7;
     cursor: not-allowed;
     color: #999;
     border-color: #ddd;
