@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
+import ModalManager from "./context/ModalManager";
 import "./globals.scss";
 
 const geistSans = localFont({
@@ -8,6 +9,7 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -34,7 +36,10 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem={true}
         >
-          {children}
+          {/* Wrap the app with the ModalManager */}
+          <ModalManager>
+            {children}
+          </ModalManager>
         </ThemeProvider>
       </body>
     </html>

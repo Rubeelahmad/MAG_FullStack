@@ -4,9 +4,12 @@ import styles from "./HeroText.module.scss";
 import Bgimg5 from "../images/bgimg5.png";
 import Button from "../Button";
 import Image from "next/image";
+import { useModal } from "@/app/context/ModalManager";
 
 
 const HeroText = () => {
+  const {openModal} = useModal()
+
   return (
     <div className={styles.wrapBox}>
       <Image src={Bgimg5} className={styles.bgimg5} alt="" />
@@ -20,7 +23,7 @@ const HeroText = () => {
         <Button
           btntext="Schedule a call"
           btntype={"primary"}
-          btnAction={() => false}
+          btnAction={openModal}
         />
         <Button
           btntext="Free Trial"

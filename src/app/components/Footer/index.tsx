@@ -10,8 +10,11 @@ import Youtube from "./images/Youtube";
 import Facebook from "./images/Facebook";
 import Ttwitter from "./images/Twitter";
 import Linkedin from "./images/Linkedin";
+import { useModal } from "@/app/context/ModalManager";
 
 const Footer = () => {
+  const {openModal} = useModal()
+
   return (
     <div className={styles.wrapBox}>
       <div className="container">
@@ -67,7 +70,7 @@ const Footer = () => {
               <Button
                 btntext="Schedule a call"
                 btntype={"primary"}
-                btnAction={() => false}
+                btnAction={openModal}
               />
             </div>
             <div className={styles.col}>
