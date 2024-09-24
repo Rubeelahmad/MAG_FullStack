@@ -14,9 +14,8 @@
       @apply h-6 w-6 text-[#32baae] focus:ring-[#32baae] border-2 border-[#32baae] rounded;
       border: #32baae solid 2px !important;
     }
- 
   }
-  .checkBoxClick{
+  .checkBoxClick {
     @apply cursor-pointer;
   }
   .formButton {
@@ -27,13 +26,9 @@
   }
   .errorMessage {
     @apply bg-[#ffe6e6] text-center text-[20px] text-red-500 p-1 m-2 rounded-3xl;
-  
-
   }
-  
+
   .successMessage {
     @apply bg-[#e6ffe6] text-center text-[20px] text-green-500 p-1 m-2 rounded-3xl;
-  
   }
-  
 }
